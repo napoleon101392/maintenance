@@ -1,0 +1,30 @@
+{
+    "name": "napoleon/maintenance",
+    "description": "Running Maintenance mode on your server to secure your integration to production",
+    "type": "library",
+    "require": {
+        "php": "^7.2",
+        "vlucas/phpdotenv": "^3.3@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Napoleon\\Maintenance\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Napoleon\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "napoleon101392",
+            "email": "napoleon101392@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
