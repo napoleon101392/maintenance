@@ -7,9 +7,11 @@ class Maintenance
     public function observer()
     {
         if (!env('APP_ON_MAINTENANCE')) {
-            throw new Exception("Error Processing Request", true);
+            return;
         }
 
-        return (new Engine)->start();
+        (new Engine)->start();
+
+        exit;
     }
 }

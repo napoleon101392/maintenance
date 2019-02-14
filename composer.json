@@ -3,7 +3,7 @@
     "description": "Running Maintenance mode on your server to secure your integration to production",
     "type": "library",
     "require": {
-        "php": "^7.2",
+        "php": ">=5.6",
         "vlucas/phpdotenv": "^3.3@dev"
     },
     "require-dev": {
@@ -12,7 +12,10 @@
     "autoload": {
         "psr-4": {
             "Napoleon\\Maintenance\\": "src/"
-        }
+        },
+        "files": [
+            "helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

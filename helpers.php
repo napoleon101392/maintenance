@@ -34,28 +34,28 @@ if (!function_exists('env')) {
 if (!function_exists('view')) {
     function view($path)
     {
-        require views_path() . discover_path($path) . 'view.php';
+        require views_path() . discover_path($path) . '.view.php';
     }
 }
 
 if (!function_exists('config')) {
     function config($path)
     {
-        require config_path() . discover_path($path);
+        return require(config_path() . discover_path($path)) . '.php';
     }
 }
 
 function views_path()
 {
-    return __DIR__ . 'src/resources/views/';
+    return __DIR__ . '/src/resources/views/';
 }
 
 function config_path()
 {
-    return __DIR__ . 'src/configs/';
+    return __DIR__ . '/src/config/';
 }
 
 function discover_path($path)
 {
-    return str_replace('.', '/', $path);
+    return str_replace('.', DIRECTORY_SEPARATOR, $path);
 }
